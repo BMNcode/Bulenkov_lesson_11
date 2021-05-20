@@ -1,9 +1,9 @@
 package org.bmn.Bulenkov_lesson_11.steps;
 
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
-@Service
-public class StepOneModifer implements StringModifer {
+@Component
+public class StepOneModifer extends Step implements StringModifer {
 
     @Override
     public String modify(String source) {

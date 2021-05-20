@@ -1,5 +1,6 @@
 package org.bmn.Bulenkov_lesson_11.service;
 
+import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
