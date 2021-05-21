@@ -1,26 +1,15 @@
 package org.bmn.Bulenkov_lesson_11.steps;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.Ordered;
 import org.springframework.stereotype.Component;
 
 @Component
-public class StepTwoModifier extends Step implements StringModifer {
-
-
-    private Step stepOneModifer;
-
-    @Autowired
-    public StepTwoModifier(StepOneModifer stepOneModifer) {
-        this.stepOneModifer = stepOneModifer;
-    }
+public class StepTwoModifier implements StringModifer {
 
     //shift the line to the right
     @Override
-    public String modify(String stepOne) {
-        String stepTwo = stepOneModifer.modify(stepOne);
-        String result = stepTwo.substring(stepTwo.length() - 2) + stepTwo.substring(0, stepTwo.length() - 2);
-        System.out.println("Второй шаг: " + result);
+    public String modify(String source) {
+        System.out.println("Второй шаг: ");
+        String result = source.substring(source.length() - 2) + source.substring(0, source.length() - 2);
         return result;
     }
 

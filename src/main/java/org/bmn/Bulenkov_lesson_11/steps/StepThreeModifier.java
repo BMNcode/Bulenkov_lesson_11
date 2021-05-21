@@ -4,21 +4,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
-public class StepThreeModifier extends Step implements StringModifer {
+public class StepThreeModifier implements StringModifer {
 
-    private final Step stepTwoModifier;
-
-    @Autowired
-    public StepThreeModifier(StepTwoModifier stepTwoModifier) {
-        this.stepTwoModifier = stepTwoModifier;
-    }
 
     //converting the first character to uppercase
     @Override
-    public String modify(String stepTwo) {
-        String stepThree = stepTwoModifier.modify(stepTwo);
-        String result = stepThree.substring(0, 1).toUpperCase() + stepThree.substring(1);
-        System.out.println("Третий шаг: " + result);
+    public String modify(String source) {
+        System.out.println("Третий шаг: ");
+        String result = source.substring(0, 1).toUpperCase() + source.substring(1);
         return result;
     }
 

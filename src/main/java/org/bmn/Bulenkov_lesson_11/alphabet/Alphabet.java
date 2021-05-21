@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Service
-public class Performance {
+public class Alphabet {
 
     public Map<String, String> alphabet() {
         Map<String, String> result = new HashMap<>();
