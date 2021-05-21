@@ -1,5 +1,7 @@
 package org.bmn.Bulenkov_lesson_11.steps;
 
+import org.springframework.core.Ordered;
+
 public abstract class Step implements StringModifer {
 
     @Override
@@ -9,6 +11,6 @@ public abstract class Step implements StringModifer {
 
     @Override
     public int getOrder() {
-        return 0;
+        return Ordered.LOWEST_PRECEDENCE;
     }
 }

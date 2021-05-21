@@ -6,17 +6,20 @@ import org.springframework.stereotype.Component;
 @Component
 public class StepThreeModifier extends Step implements StringModifer {
 
-    private final StepTwoModifier stepTwoModifier;
+    private final Step stepTwoModifier;
 
     @Autowired
     public StepThreeModifier(StepTwoModifier stepTwoModifier) {
         this.stepTwoModifier = stepTwoModifier;
     }
 
+    //converting the first character to uppercase
     @Override
     public String modify(String stepTwo) {
         String stepThree = stepTwoModifier.modify(stepTwo);
-        return stepThree.substring(0, 1).toUpperCase() + stepThree.substring(1);
+        String result = stepThree.substring(0, 1).toUpperCase() + stepThree.substring(1);
+        System.out.println("Третий шаг: " + result);
+        return result;
     }
 
     @Override

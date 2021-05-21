@@ -1,6 +1,5 @@
-package org.bmn.Bulenkov_lesson_11.service;
+package org.bmn.Bulenkov_lesson_11.alphabet;
 
-import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
@@ -17,7 +16,7 @@ public class Performance {
         result.put("к", "ю");
         result.put("%", " ");
         result.put("~", "я");
-        result.put("Ж", "j");
+        result.put("Ж", "J");
         result.put("п", "v");
 
         return result;
